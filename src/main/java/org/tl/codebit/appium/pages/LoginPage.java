@@ -26,4 +26,9 @@ public class LoginPage extends BasePage {
     public void writePassword(String senha) throws MalformedURLException {
         writeByPlaceholder("Digite sua senha", senha);
     }
+
+    public void clickRealizeLogin() throws MalformedURLException {
+        clickByPlaceholder("ENTRAR");
+    };
+
 }

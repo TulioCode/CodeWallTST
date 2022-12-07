@@ -21,6 +21,10 @@ public class BasePage {
         getDriver().findElement(By.xpath("//*[@text='"+text+"']")).sendKeys(msg);
     }
 
+    public void clickByPlaceholder(String text) throws MalformedURLException {
+        getDriver().findElement(By.xpath("//*[@text='"+text+"']")).click();
+    }
+
     public String getText(By by) throws MalformedURLException {
         return getDriver().findElement(by).getText();
     }

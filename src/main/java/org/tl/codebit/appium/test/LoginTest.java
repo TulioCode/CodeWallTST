@@ -1,6 +1,7 @@
 package org.tl.codebit.appium.test;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.tl.codebit.appium.core.BaseTest;
 import org.tl.codebit.appium.pages.LoginPage;
 
@@ -15,5 +16,6 @@ public class LoginTest extends BaseTest {
         page.passInitialBanner();
         page.writeEmail("tulio@codebit.com.br");
         page.writePassword("Codebit@123");
+        page.clickRealizeLogin();
     }
 }
