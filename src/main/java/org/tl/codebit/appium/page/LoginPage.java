@@ -1,6 +1,8 @@
-package org.tl.codebit.appium.pages;
+package org.tl.codebit.appium.page;
 
 import io.appium.java_client.MobileDriver;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.tl.codebit.appium.core.BasePage;
@@ -30,5 +32,17 @@ public class LoginPage extends BasePage {
     public void clickRealizeLogin() throws MalformedURLException {
         clickByPlaceholder("ENTRAR");
     };
+
+    public void clickToDevices() throws MalformedURLException {
+        clickByText("Aparelhos");
+    }
+    public String takeTitlePageDevices() throws MalformedURLException {
+        return getText(By.className("android.widget.TextView"));
+    }
+    public void clickDeviceNoIdentification(int x, int y) throws MalformedURLException {
+        new TouchAction<>(getDriver()).press(PointOption.point(x,y)).perform().release();
+    }
+
+
 
 }
